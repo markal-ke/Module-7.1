@@ -5,10 +5,11 @@ import LoginForm from "./LoginForm.jsx";
 import AppRoutes from "./routes/AppRoutes.jsx";
 import RoutesApp from "./routes/RoutesApp.jsx";
 import BitcoinRates from "./Module-7/BitcoinRates.jsx";
-import { EmojiProvider, useEmojiContext } from "./Module-7/context/EmojiContext.jsx";
+
 import Navbar from "./Module-7/NavBar.jsx";
 import AppBar from "./Module-7/AppBar.jsx";
 import {useUserContext, UserProvider} from "./Module-7/context/UserContext.jsx";
+import {useEmojiContext, EmojiProvider} from "./components/Exercise_3/EmojiContext.jsx";
 
 function App() {
   const [count, setCount] = useState(0);

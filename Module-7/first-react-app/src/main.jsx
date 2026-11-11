@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
 import {UserProvider} from './Module-7/context/UserContext.jsx'
-import {EmojiProvider} from './Module-7/context/EmojiContext.jsx'
 import { BrowserRouter } from 'react-router-dom'
+import { EmojiProvider } from './components/Exercise_3/EmojiContext.jsx'
 
 
 // This code in main.jsx handles rendering the App component

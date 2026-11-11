@@ -5,10 +5,13 @@ const EmojiContext = React.createContext();
 // Use it in App.jsx like <UserProvider>...</UserProvider>
 export const EmojiProvider = (props) => {
 // store the current user in state at the top level
-const [currentEmoji, setcurrentEmoji] = useState({});
+const [currentEmoji, setcurrentEmoji] = useState('😫');
 // sets user object in state, shared via context
-const handleUpdateEmoji = (user) => {
-setCurrentEmoji(user);
+const handleUpdateEmoji = () => {
+let newEmoji = '😫';
+if (currentEmoji === '😫') newEmoji = '😰'
+else if (currentEmoji === '😰') newEmoji = '😱';
+setcurrentEmoji(newEmoji);
 }
 
 return (

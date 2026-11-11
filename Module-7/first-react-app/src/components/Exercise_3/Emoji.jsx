@@ -1,25 +1,28 @@
 
-import {createContext, useContext} from "react";
-import { useEmojiContext } from "../../Module-7/context/EmojiContext.jsx";
+import { useState } from "react";
+import {useEmojiContext} from "./EmojiContext.jsx"
+
+
 function Emoji() {
-const { mood, setMood } = useEmojiContext();
+    const {currentEmoji, handleUpdateEmoji} = useEmojiContext();
 
-const handleLosingDeadlock = () => {
-let newMood = '😫';
-if (mood === '😫') newMood = '😰'
-else if (mood === '😰') newMood = '😱';
-setMood(newMood)
-}
-
-return (
-<div className="MoodChanger componentBox">
-Current Mood: {mood}
-<button onClick={handleLosingDeadlock}>Running Late</button>
-</div>
-)
+const handleEmojiChange = () => {
+let newEmoji = '😫';
+if (currentEmoji === '😫') newEmoji = '😰'
+else if (currentEmoji === '😰') newEmoji = '😱';
+setCurrentEmoji(newEmoji)
 }
 
 
-
-
+    return (
+        <div className="Emoji componentBox">
+            Emoji: {currentEmoji}
+            <button onClick={handleUpdateEmoji}>Switch Emoji</button>
+        </div>
+    )
+}
 export default Emoji;
+
+
+
+

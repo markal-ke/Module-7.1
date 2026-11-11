@@ -6,8 +6,8 @@ const [currency, setCurrency] = useState(currencies[0]);
 useEffect(() => {
     console.log('running effect');
 let ignore = false;
-fetch(`https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=${currency}` +
-'currency=' + currency)
+fetch(`https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=${currency}`)
+
 
 .then(response => response.json())
 .then(json => {
